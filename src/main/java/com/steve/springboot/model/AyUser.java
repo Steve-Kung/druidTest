@@ -1,14 +1,24 @@
 package com.steve.springboot.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * @Auther: http://www.stevekung.com
  * @Date: 2019/12/21
  * @Description: com.steve.springboot.model
  * @version: 1.0
  */
+@Entity // 每个持久化POJO类都是一个实体Bean
+@Table(name="ay_user") // 声明数据库的数据表
 public class AyUser {
+    // 主键
+    @Id // 指定主键
     private String id;
+    // 用户名
     private String name;
+    // 密码
     private String password;
 
     public String getId() {

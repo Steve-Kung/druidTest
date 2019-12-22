@@ -1,14 +1,19 @@
 package com.steve.springboot;
 
 import com.steve.springboot.model.AyUser;
+import com.steve.springboot.service.AyUserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.util.Assert;
 
 import javax.annotation.Resource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootTest
@@ -42,5 +47,43 @@ class Springboot01ApplicationTests {
         }
     }
 
+    @Resource
+    private AyUserService ayUserService;
+    @Test
+    public void testRepository(){
+        // 查询所有数据
+        List<AyUser> userList = ayUserService.findAll();
+        System.out.println("findAll(): "+ userList.size());
+        // 通过name查询数据
+        List<AyUser> userList2 = ayUserService.findByName("阿毅");
+        System.out.println("findByName(): "+ userList2.size());
+        Assert.isTrue(userList2.get(0).getName().equals("阿毅"),"data error!");
+        // Assert断言是软件开发中一种常见的调试方式
+        // 通过name模糊查询数据
+        List<AyUser> userList3 = ayUserService.findByNameLike("%毅%");
+        System.out.println("findByNameLike(): " + userList3.size());
+        Assert.isTrue(userList3.get(0).getName().equals("阿毅"),"data error!");
+        // 通过id列表查询数据
+        List<String> ids = new ArrayList<>();
+        ids.add("1");
+        ids.add("2");
+        ids.add("3");
+        List<AyUser> userList4 = ayUserService.findByIdIn(ids);
+        System.out.println("findByIdIn(): "+userList4.size());
+        // 分页查询数据
+        // 把原来的 new PageRequest 改成 PageRequest.of(0,10);
+        PageRequest pageRequest = PageRequest.of(0,10);
+        Page<AyUser> userList5 = ayUserService.findAll(pageRequest);
+        System.out.println("findAll(): " + userList5.getTotalPages()+"/"+userList5.getSize());
+        // 新增数据
+        AyUser ayUser = new AyUser();
+        ayUser.setId("4");
+        ayUser.setName("test");
+        ayUser.setPassword("1230");
+        ayUserService.save(ayUser);
+        // 删除数据
+        ayUserService.delete("4");
 
+
+    }
 }
