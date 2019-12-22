@@ -11,3 +11,5 @@ public class Springboot01Application {
     }
 
 }
+
+// 此项目是参考一步一步学spring-boot2微服务项目实战
