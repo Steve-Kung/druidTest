@@ -8,6 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import javax.transaction.Transactional;
 import java.util.Collection;
 import java.util.List;
 
@@ -17,6 +18,7 @@ import java.util.List;
  * @Description: com.steve.springboot.service.impl
  * @version: 1.0
  */
+@Transactional // 一般在服务层通过注解来开启事务，注解在类上，表明此类所有public方法都是开启事务的
 @Service // 表明是service服务层类，并纳入Spring容器管理
 public class AyUserServiceImpl implements AyUserService {
     @Resource(name = "ayUserRepository") // 默认按照名称进行装配，也可通过name属性指定
@@ -33,9 +35,14 @@ public class AyUserServiceImpl implements AyUserService {
         return ayUserRepository.findAll();
     }
 
+    @Transactional
     @Override
     public AyUser save(AyUser ayUser) {
-        return ayUserRepository.save(ayUser);
+        AyUser saveUser = ayUserRepository.save(ayUser);
+        // 出现空指针异常
+//        String error = null;
+//        error.split("/");
+        return saveUser;
     }
 
     @Override

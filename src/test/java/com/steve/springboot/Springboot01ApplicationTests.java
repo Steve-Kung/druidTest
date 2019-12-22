@@ -86,4 +86,14 @@ class Springboot01ApplicationTests {
 
 
     }
+
+    @Test
+    public void testTransaction(){
+        AyUser ayUser = new AyUser();
+        ayUser.setId("4");
+        ayUser.setName("阿花");
+        ayUser.setPassword("123");
+        ayUserService.save(ayUser);
+        // 由于方法save保存数据时出现空指针异常，数据会回滚，如果保留了@Transaction注解，数据库查不到此条信息。数据更加安全。
+    }
 }
