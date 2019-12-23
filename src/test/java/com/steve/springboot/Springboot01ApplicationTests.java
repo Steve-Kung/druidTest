@@ -2,6 +2,8 @@ package com.steve.springboot;
 
 import com.steve.springboot.model.AyUser;
 import com.steve.springboot.service.AyUserService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
@@ -135,6 +137,13 @@ class Springboot01ApplicationTests {
         redisUserSize = redisTemplate.opsForList().size("ALL_USER_LIST");
         System.out.println("目前缓存中的用户数量为：" + redisUserSize);
 
+    }
+
+    Logger logger = LogManager.getLogger(this.getClass());
+    @Test
+    public void testLog4j(){
+        ayUserService.delete("4");
+        logger.info("delete success!!!");
     }
 
 }
