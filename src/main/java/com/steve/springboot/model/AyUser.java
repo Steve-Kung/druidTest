@@ -3,6 +3,7 @@ package com.steve.springboot.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 /**
  * @Auther: http://www.stevekung.com
@@ -12,7 +13,7 @@ import javax.persistence.Table;
  */
 @Entity // 每个持久化POJO类都是一个实体Bean
 @Table(name="ay_user") // 声明数据库的数据表
-public class AyUser {
+public class AyUser implements Serializable {
     // 主键
     @Id // 指定主键
     private String id;

@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.util.Assert;
@@ -25,7 +27,6 @@ class Springboot01ApplicationTests {
 
     @Resource // 通过注解，实例化一个对象，省去初始化工作
     private JdbcTemplate jdbcTemplate; // JDBC工具类，可以对数据库进行增删改查等操作
-
     @Test
     public void mysqlTest(){
         String sql = "select id, name, password from ay_user";
@@ -96,4 +97,44 @@ class Springboot01ApplicationTests {
         ayUserService.save(ayUser);
         // 由于方法save保存数据时出现空指针异常，数据会回滚，如果保留了@Transaction注解，数据库查不到此条信息。数据更加安全。
     }
+
+    @Resource // 通过注解注入
+    private RedisTemplate redisTemplate; // Spring Data Redis为我们提供的模板类，用来对数据继续操作
+    @Resource
+    private StringRedisTemplate stringRedisTemplate; // String这个只针对键值是字符串的数据进行操作
+    @Test
+    public void testRedis(){
+        // 增
+        redisTemplate.opsForValue().set("name", "ay");
+        String name = (String)redisTemplate.opsForValue().get("name");
+        System.out.println(name);
+        // 删
+        redisTemplate.delete("name");
+//        改
+        redisTemplate.opsForValue().set("name", "al");
+//        查
+        name = stringRedisTemplate.opsForValue().get("name");
+        System.out.println(name);
+    }
+    @Test
+    public void testFindById(){
+        Long redisUserSize = 0L;
+        //查询id = 1 的数据，该数据存在于redis缓存中
+        AyUser ayUser = ayUserService.findById("1");
+        redisUserSize = redisTemplate.opsForList().size("ALL_USER_LIST");
+        System.out.println("目前缓存中的用户数量为：" + redisUserSize);
+        System.out.println("--->>> id: " + ayUser.getId() + " name:" + ayUser.getName());
+        //查询id = 2 的数据，该数据存在于redis缓存中
+        AyUser ayUser1 = ayUserService.findById("2");
+        redisUserSize = redisTemplate.opsForList().size("ALL_USER_LIST");
+        System.out.println("目前缓存中的用户数量为：" + redisUserSize);
+        System.out.println("--->>> id: " + ayUser1.getId() + " name:" + ayUser1.getName());
+        //先在此处打断点，然后在往数据库里插入第5条数据，再接着运行,查询id = 5 的数据，不存在于redis缓存中，存在于数据库中，所以会把数据库查询的数据更新到缓存中
+        AyUser ayUser3 = ayUserService.findById("5");
+        System.out.println("--->>> id: " + ayUser3.getId() + " name:" + ayUser3.getName());
+        redisUserSize = redisTemplate.opsForList().size("ALL_USER_LIST");
+        System.out.println("目前缓存中的用户数量为：" + redisUserSize);
+
+    }
+
 }

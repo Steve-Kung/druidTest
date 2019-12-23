@@ -5,6 +5,7 @@ import com.steve.springboot.repository.AyUserRepository;
 import com.steve.springboot.service.AyUserService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -24,10 +25,29 @@ public class AyUserServiceImpl implements AyUserService {
     @Resource(name = "ayUserRepository") // 默认按照名称进行装配，也可通过name属性指定
     private AyUserRepository ayUserRepository;
 
+    @Resource
+    private RedisTemplate redisTemplate;
+    private static final String ALL_USER = "ALL_USER_LIST";
+
     // 实现增删改查
     @Override
     public AyUser findById(String id) {
-        return ayUserRepository.findById(id).get();
+        // 1、查询Redis缓存中的所有数据
+        List<AyUser> ayUserList = redisTemplate.opsForList().range(ALL_USER,0,-1);
+        if(ayUserList != null && ayUserList.size() > 0){
+            for(AyUser ayUser : ayUserList){
+                if(ayUser.getId().equals(id)){
+                    return ayUser;
+                }
+            }
+        }
+        // 2、查询数据库中的数据
+        AyUser ayUser = ayUserRepository.findById(id).get();
+        if(ayUser != null){
+            // 3、将数据插入Redis缓存中
+            redisTemplate.opsForList().leftPush(ALL_USER,ayUser);
+        }
+        return ayUser;
     }
 
     @Override
