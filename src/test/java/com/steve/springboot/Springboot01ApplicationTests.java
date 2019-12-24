@@ -146,4 +146,11 @@ class Springboot01ApplicationTests {
         logger.info("delete success!!!");
     }
 
+    @Test
+    public void testMybatis(){
+        AyUser ayUser = ayUserService.findByNameAndPassword("阿毅", "123456");
+        logger.info(ayUser.getId() + ayUser.getName());
+        System.out.println(ayUser.getId() + ayUser.getName());
+    }
+
 }

@@ -1,5 +1,6 @@
 package com.steve.springboot.service.impl;
 
+import com.steve.springboot.dao.AyUserDao;
 import com.steve.springboot.model.AyUser;
 import com.steve.springboot.repository.AyUserRepository;
 import com.steve.springboot.service.AyUserService;
@@ -94,5 +95,12 @@ public class AyUserServiceImpl implements AyUserService {
     @Override
     public List<AyUser> findByIdIn(Collection<String> ids) {
         return ayUserRepository.findByIdIn(ids);
+    }
+
+    @Resource
+    private AyUserDao ayUserDao;
+    @Override
+    public AyUser findByNameAndPassword(String name, String password) {
+        return ayUserDao.findByNameAndPassword(name, password);
     }
 }

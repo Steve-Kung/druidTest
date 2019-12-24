@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--mappper标签：namespace属性用于绑定Dao接口-->
+<mapper namespace="com.steve.springboot.dao.AyUserDao" >
+
+    <resultMap id="UserResultMap" type="com.steve.springboot.model.AyUser">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <result column="mail" property="mail" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--select标签用于编写select语句，映射查询语句。-->
+    <!--resultMap映射管理器。描述了如何将数据库查询的结果集映射到java对象，并管理结果与实体类之间的映射关系-->
+    <select id="findByNameAndPassword" resultMap="UserResultMap" parameterType="String">
+        select * from ay_user u
+        <where>
+            u.name = #{name}
+            and u.password = #{password}
+        </where>
+    </select>
+
+</mapper>
