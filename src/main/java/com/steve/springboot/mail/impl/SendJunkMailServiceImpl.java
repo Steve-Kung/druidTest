@@ -45,7 +45,7 @@ public class SendJunkMailServiceImpl implements SendJunkMailService {
                 //邮件主题
                 message.setSubject("地瓜今日特卖");
                 //邮件接收方
-                message.setTo("al_test@163.com");
+                message.setTo("stevekung98@163.com");
                 //邮件内容
                 message.setText(ayUser.getName() +" ,你知道么？厦门地瓜今日特卖，一斤只要9元");
                 //发送邮件

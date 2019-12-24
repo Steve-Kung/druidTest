@@ -1,139 +1,37 @@
-[12:53:21:705] [INFO] - org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55) - Starting Springboot01Application on SteveKung-PC with PID 97148 (F:\java_workspace\springboot01\target\classes started by SteveKung in F:\java_workspace\springboot01)
-[12:53:21:718] [INFO] - org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651) - No active profile set, falling back to default profiles: default
-[12:53:24:169] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) - Multiple Spring Data modules found, entering strict repository configuration mode!
-[12:53:24:181] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[12:53:24:316] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) - Finished Spring Data repository scanning in 122ms. Found 1 JPA repository interfaces.
-[12:53:24:342] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) - Multiple Spring Data modules found, entering strict repository configuration mode!
-[12:53:24:344] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-[12:53:24:366] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate(RepositoryConfigurationExtensionSupport.java:348) - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.steve.springboot.repository.AyUserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-[12:53:24:367] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) - Finished Spring Data repository scanning in 10ms. Found 0 Redis repository interfaces.
-[12:53:25:004] [INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[12:53:26:522] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92) - Tomcat initialized with port(s): 8080 (http)
-[12:53:26:570] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
-[12:53:26:575] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting service [Tomcat]
-[12:53:26:580] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.29]
-[12:53:27:090] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
-[12:53:27:091] [INFO] - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 5272 ms
-[12:53:29:745] [ERROR] - com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:795) - testWhileIdle is true, validationQuery not set
-[12:53:29:829] [INFO] - com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:655) - {dataSource-1} inited
-[12:53:30:587] [INFO] - org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
-[12:53:31:052] [INFO] - org.hibernate.Version.logVersion(Version.java:46) - HHH000412: Hibernate Core {5.4.9.Final}
-[12:53:31:743] [INFO] - org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-[12:53:32:246] [INFO] - org.hibernate.dialect.Dialect.<init>(Dialect.java:172) - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-[12:53:35:621] [INFO] - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[12:53:35:674] [INFO] - org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[12:53:37:542] [INFO] - com.steve.springboot.listener.AyUserListener.contextInitialized(AyUserListener.java:42) - ServletContext 上下文初始化
-[12:53:39:026] [INFO] - io.lettuce.core.EpollProvider.<clinit>(EpollProvider.java:68) - Starting without optional epoll library
-[12:53:39:042] [INFO] - io.lettuce.core.KqueueProvider.<clinit>(KqueueProvider.java:70) - Starting without optional kqueue library
-[12:53:42:070] [INFO] - com.steve.springboot.listener.AyUserListener.contextInitialized(AyUserListener.java:53) - 缓存中目前的用户数有：5人
-[12:53:42:071] [INFO] - com.steve.springboot.listener.AyUserListener.contextInitialized(AyUserListener.java:55) - 用于统计人数
-[12:53:42:348] [WARN] - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:220) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[12:53:42:719] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'applicationTaskExecutor'
-[12:53:43:133] [WARN] - org.thymeleaf.templatemode.TemplateMode.parse(TemplateMode.java:150) - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-[12:53:44:068] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
-[12:53:44:142] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204) - Tomcat started on port(s): 8080 (http) with context path ''
-[12:53:44:147] [INFO] - org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61) - Started Springboot01Application in 23.324 seconds (JVM running for 26.404)
-[12:58:40:598] [INFO] - org.springframework.test.context.support.AbstractTestContextBootstrapper.buildDefaultMergedContextConfiguration(AbstractTestContextBootstrapper.java:308) - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.steve.springboot.Springboot01ApplicationTests], using SpringBootContextLoader
-[12:58:40:616] [INFO] - org.springframework.test.context.support.AbstractContextLoader.generateDefaultLocations(AbstractContextLoader.java:264) - Could not detect default resource locations for test class [com.steve.springboot.Springboot01ApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-[12:58:40:618] [INFO] - org.springframework.test.context.support.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses(AnnotationConfigContextLoaderUtils.java:83) - Could not detect default configuration classes for test class [com.steve.springboot.Springboot01ApplicationTests]: Springboot01ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-[12:58:40:780] [INFO] - org.springframework.boot.test.context.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses(SpringBootTestContextBootstrapper.java:235) - Found @SpringBootConfiguration com.steve.springboot.Springboot01Application for test class com.steve.springboot.Springboot01ApplicationTests
-[12:58:40:908] [INFO] - org.springframework.test.context.support.AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:248) - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-[12:58:40:932] [INFO] - org.springframework.test.context.support.AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:177) - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@df1cff6, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4925f4f5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1ad926d3, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3a43d133, org.springframework.test.context.support.DirtiesContextTestExecutionListener@39ce27f2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5f2afe62, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@c96a4ea, org.springframework.test.context.event.EventPublishingTestExecutionListener@28782602, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@60c16548, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@68105edc, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@511816c0, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@38b972d7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5339bbad]
-[12:58:41:688] [INFO] - org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55) - Starting Springboot01ApplicationTests on SteveKung-PC with PID 112700 (started by SteveKung in F:\java_workspace\springboot01)
-[12:58:41:699] [INFO] - org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651) - No active profile set, falling back to default profiles: default
-[12:58:43:673] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) - Multiple Spring Data modules found, entering strict repository configuration mode!
-[12:58:43:698] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[12:58:43:964] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) - Finished Spring Data repository scanning in 249ms. Found 1 JPA repository interfaces.
-[12:58:43:995] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) - Multiple Spring Data modules found, entering strict repository configuration mode!
-[12:58:43:998] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-[12:58:44:021] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate(RepositoryConfigurationExtensionSupport.java:348) - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.steve.springboot.repository.AyUserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-[12:58:44:022] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) - Finished Spring Data repository scanning in 9ms. Found 0 Redis repository interfaces.
-[12:58:44:805] [INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[12:58:45:672] [ERROR] - com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:795) - testWhileIdle is true, validationQuery not set
-[12:58:45:723] [INFO] - com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:655) - {dataSource-1} inited
-[12:58:46:580] [INFO] - org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
-[12:58:46:808] [INFO] - org.hibernate.Version.logVersion(Version.java:46) - HHH000412: Hibernate Core {5.4.9.Final}
-[12:58:47:111] [INFO] - org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-[12:58:47:529] [INFO] - org.hibernate.dialect.Dialect.<init>(Dialect.java:172) - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-[12:58:49:046] [INFO] - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[12:58:49:055] [INFO] - org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[12:58:51:552] [WARN] - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:220) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[12:58:52:130] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'applicationTaskExecutor'
-[12:58:52:608] [WARN] - org.thymeleaf.templatemode.TemplateMode.parse(TemplateMode.java:150) - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-[12:58:53:592] [INFO] - org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61) - Started Springboot01ApplicationTests in 12.609 seconds (JVM running for 17.425)
-[12:58:54:589] [INFO] - io.lettuce.core.EpollProvider.<clinit>(EpollProvider.java:68) - Starting without optional epoll library
-[12:58:54:592] [INFO] - io.lettuce.core.KqueueProvider.<clinit>(KqueueProvider.java:70) - Starting without optional kqueue library
-[12:58:55:999] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:208) - Shutting down ExecutorService 'applicationTaskExecutor'
-[12:58:56:251] [INFO] - org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:598) - Closing JPA EntityManagerFactory for persistence unit 'default'
-[12:58:56:291] [INFO] - com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1370) - {dataSource-1} closed
-[12:59:29:708] [INFO] - org.springframework.test.context.support.AbstractTestContextBootstrapper.buildDefaultMergedContextConfiguration(AbstractTestContextBootstrapper.java:308) - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.steve.springboot.Springboot01ApplicationTests], using SpringBootContextLoader
-[12:59:29:734] [INFO] - org.springframework.test.context.support.AbstractContextLoader.generateDefaultLocations(AbstractContextLoader.java:264) - Could not detect default resource locations for test class [com.steve.springboot.Springboot01ApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-[12:59:29:739] [INFO] - org.springframework.test.context.support.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses(AnnotationConfigContextLoaderUtils.java:83) - Could not detect default configuration classes for test class [com.steve.springboot.Springboot01ApplicationTests]: Springboot01ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-[12:59:30:034] [INFO] - org.springframework.boot.test.context.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses(SpringBootTestContextBootstrapper.java:235) - Found @SpringBootConfiguration com.steve.springboot.Springboot01Application for test class com.steve.springboot.Springboot01ApplicationTests
-[12:59:30:179] [INFO] - org.springframework.test.context.support.AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:248) - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-[12:59:30:205] [INFO] - org.springframework.test.context.support.AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:177) - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@df1cff6, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4925f4f5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1ad926d3, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3a43d133, org.springframework.test.context.support.DirtiesContextTestExecutionListener@39ce27f2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5f2afe62, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@c96a4ea, org.springframework.test.context.event.EventPublishingTestExecutionListener@28782602, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@60c16548, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@68105edc, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@511816c0, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@38b972d7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5339bbad]
-[12:59:30:543] [INFO] - org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21) - HV000001: Hibernate Validator 6.0.18.Final
-[12:59:30:678] [INFO] - org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55) - Starting Springboot01ApplicationTests on SteveKung-PC with PID 114036 (started by SteveKung in F:\java_workspace\springboot01)
-[12:59:30:683] [INFO] - org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651) - No active profile set, falling back to default profiles: default
-[12:59:32:733] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) - Multiple Spring Data modules found, entering strict repository configuration mode!
-[12:59:32:747] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[12:59:33:120] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) - Finished Spring Data repository scanning in 355ms. Found 1 JPA repository interfaces.
-[12:59:33:163] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) - Multiple Spring Data modules found, entering strict repository configuration mode!
-[12:59:33:165] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-[12:59:33:190] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate(RepositoryConfigurationExtensionSupport.java:348) - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.steve.springboot.repository.AyUserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-[12:59:33:190] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) - Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
-[12:59:34:055] [INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[12:59:34:560] [ERROR] - com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:795) - testWhileIdle is true, validationQuery not set
-[12:59:34:589] [INFO] - com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:655) - {dataSource-1} inited
-[12:59:35:446] [INFO] - org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
-[12:59:35:611] [INFO] - org.hibernate.Version.logVersion(Version.java:46) - HHH000412: Hibernate Core {5.4.9.Final}
-[12:59:35:991] [INFO] - org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-[12:59:36:215] [INFO] - org.hibernate.dialect.Dialect.<init>(Dialect.java:172) - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-[12:59:37:297] [INFO] - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[12:59:37:313] [INFO] - org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[12:59:39:201] [WARN] - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:220) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[12:59:39:630] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'applicationTaskExecutor'
-[12:59:40:113] [WARN] - org.thymeleaf.templatemode.TemplateMode.parse(TemplateMode.java:150) - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-[12:59:40:857] [INFO] - org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61) - Started Springboot01ApplicationTests in 10.592 seconds (JVM running for 15.706)
-[12:59:41:239] [INFO] - com.steve.springboot.service.impl.AyUserServiceImpl.delete(AyUserServiceImpl.java:76) - userId: 4用户被删除
-[12:59:41:455] [INFO] - com.steve.springboot.Springboot01ApplicationTests.testLog4j(Springboot01ApplicationTests.java:146) - delete success!!!
-[12:59:41:483] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:208) - Shutting down ExecutorService 'applicationTaskExecutor'
-[12:59:41:507] [INFO] - org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:598) - Closing JPA EntityManagerFactory for persistence unit 'default'
-[12:59:41:519] [INFO] - com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1370) - {dataSource-1} closed
-[13:23:47:698] [INFO] - org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55) - Starting Springboot01Application on SteveKung-PC with PID 115088 (F:\java_workspace\springboot01\target\classes started by SteveKung in F:\java_workspace\springboot01)
-[13:23:47:711] [INFO] - org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651) - No active profile set, falling back to default profiles: default
-[13:23:48:838] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) - Multiple Spring Data modules found, entering strict repository configuration mode!
-[13:23:48:840] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[13:23:48:938] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) - Finished Spring Data repository scanning in 89ms. Found 1 JPA repository interfaces.
-[13:23:48:961] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) - Multiple Spring Data modules found, entering strict repository configuration mode!
-[13:23:48:964] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-[13:23:48:984] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate(RepositoryConfigurationExtensionSupport.java:348) - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.steve.springboot.repository.AyUserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-[13:23:48:985] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) - Finished Spring Data repository scanning in 9ms. Found 0 Redis repository interfaces.
-[13:23:49:402] [INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[13:23:49:768] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92) - Tomcat initialized with port(s): 8080 (http)
-[13:23:49:780] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
-[13:23:49:782] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting service [Tomcat]
-[13:23:49:783] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.29]
-[13:23:49:962] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
-[13:23:49:962] [INFO] - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 2197 ms
-[13:23:50:454] [ERROR] - com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:795) - testWhileIdle is true, validationQuery not set
-[13:23:50:462] [INFO] - com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:655) - {dataSource-1} inited
-[13:23:50:945] [INFO] - org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
-[13:23:51:138] [INFO] - org.hibernate.Version.logVersion(Version.java:46) - HHH000412: Hibernate Core {5.4.9.Final}
-[13:23:51:275] [INFO] - org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-[13:23:51:396] [INFO] - org.hibernate.dialect.Dialect.<init>(Dialect.java:172) - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-[13:23:51:930] [INFO] - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[13:23:51:938] [INFO] - org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[13:23:52:532] [INFO] - com.steve.springboot.listener.AyUserListener.contextInitialized(AyUserListener.java:42) - ServletContext 上下文初始化
-[13:23:52:854] [INFO] - io.lettuce.core.EpollProvider.<clinit>(EpollProvider.java:68) - Starting without optional epoll library
-[13:23:52:858] [INFO] - io.lettuce.core.KqueueProvider.<clinit>(KqueueProvider.java:70) - Starting without optional kqueue library
-[13:23:53:536] [INFO] - com.steve.springboot.listener.AyUserListener.contextInitialized(AyUserListener.java:53) - 缓存中目前的用户数有：4人
-[13:23:53:537] [INFO] - com.steve.springboot.listener.AyUserListener.contextInitialized(AyUserListener.java:55) - 用于统计人数
-[13:23:53:691] [INFO] - org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1220) - Using default implementation for ThreadExecutor
-[13:23:53:704] [INFO] - org.quartz.core.SchedulerSignalerImpl.<init>(SchedulerSignalerImpl.java:61) - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-[13:23:53:705] [INFO] - org.quartz.core.QuartzScheduler.<init>(QuartzScheduler.java:229) - Quartz Scheduler v.2.3.2 created.
-[13:23:53:706] [INFO] - org.quartz.simpl.RAMJobStore.initialize(RAMJobStore.java:155) - RAMJobStore initialized.
-[13:23:53:707] [INFO] - org.quartz.core.QuartzScheduler.initialize(QuartzScheduler.java:294) - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'scheduler' with instanceId 'NON_CLUSTERED'
+[09:10:49:742] [INFO] - org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55) - Starting Springboot01Application on SteveKung-PC with PID 112744 (F:\java_workspace\springboot01\target\classes started by SteveKung in F:\java_workspace\springboot01)
+[09:10:50:253] [INFO] - org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651) - No active profile set, falling back to default profiles: default
+[09:10:58:042] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) - Multiple Spring Data modules found, entering strict repository configuration mode!
+[09:10:58:056] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[09:10:58:723] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) - Finished Spring Data repository scanning in 585ms. Found 1 JPA repository interfaces.
+[09:10:58:889] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) - Multiple Spring Data modules found, entering strict repository configuration mode!
+[09:10:58:905] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[09:10:59:002] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate(RepositoryConfigurationExtensionSupport.java:348) - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.steve.springboot.repository.AyUserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+[09:10:59:003] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) - Finished Spring Data repository scanning in 18ms. Found 0 Redis repository interfaces.
+[09:11:00:747] [INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[09:11:02:327] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92) - Tomcat initialized with port(s): 8080 (http)
+[09:11:02:382] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+[09:11:02:385] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting service [Tomcat]
+[09:11:02:388] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[09:11:02:905] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+[09:11:02:906] [INFO] - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 11722 ms
+[09:11:05:962] [ERROR] - com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:795) - testWhileIdle is true, validationQuery not set
+[09:11:06:120] [INFO] - com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:655) - {dataSource-1} inited
+[09:11:10:042] [INFO] - org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+[09:11:10:791] [INFO] - org.hibernate.Version.logVersion(Version.java:46) - HHH000412: Hibernate Core {5.4.9.Final}
+[09:11:11:920] [INFO] - org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[09:11:12:846] [INFO] - org.hibernate.dialect.Dialect.<init>(Dialect.java:172) - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[09:11:17:193] [INFO] - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[09:11:17:248] [INFO] - org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[09:11:19:060] [INFO] - com.steve.springboot.listener.AyUserListener.contextInitialized(AyUserListener.java:42) - ServletContext 上下文初始化
+[09:11:20:982] [INFO] - io.lettuce.core.EpollProvider.<clinit>(EpollProvider.java:68) - Starting without optional epoll library
+[09:11:20:998] [INFO] - io.lettuce.core.KqueueProvider.<clinit>(KqueueProvider.java:70) - Starting without optional kqueue library
+[09:11:24:549] [INFO] - com.steve.springboot.listener.AyUserListener.contextInitialized(AyUserListener.java:53) - 缓存中目前的用户数有：4人
+[09:11:24:550] [INFO] - com.steve.springboot.listener.AyUserListener.contextInitialized(AyUserListener.java:55) - 用于统计人数
+[09:11:25:785] [INFO] - org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1220) - Using default implementation for ThreadExecutor
+[09:11:25:862] [INFO] - org.quartz.core.SchedulerSignalerImpl.<init>(SchedulerSignalerImpl.java:61) - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+[09:11:25:863] [INFO] - org.quartz.core.QuartzScheduler.<init>(QuartzScheduler.java:229) - Quartz Scheduler v.2.3.2 created.
+[09:11:25:867] [INFO] - org.quartz.simpl.RAMJobStore.initialize(RAMJobStore.java:155) - RAMJobStore initialized.
+[09:11:25:870] [INFO] - org.quartz.core.QuartzScheduler.initialize(QuartzScheduler.java:294) - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'scheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -141,101 +39,678 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-[13:23:53:708] [INFO] - org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1374) - Quartz scheduler 'scheduler' initialized from an externally provided properties instance.
-[13:23:53:708] [INFO] - org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1378) - Quartz scheduler version: 2.3.2
-[13:23:53:710] [INFO] - org.quartz.core.QuartzScheduler.setJobFactory(QuartzScheduler.java:2293) - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@7a22302c
-[13:23:53:788] [WARN] - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:220) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[13:23:53:925] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'applicationTaskExecutor'
-[13:23:54:068] [WARN] - org.thymeleaf.templatemode.TemplateMode.parse(TemplateMode.java:150) - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-[13:23:54:264] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'taskScheduler'
-[13:23:54:307] [INFO] - org.springframework.scheduling.quartz.SchedulerFactoryBean.startScheduler(SchedulerFactoryBean.java:727) - Starting Quartz Scheduler now
-[13:23:54:308] [INFO] - org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:547) - Scheduler scheduler_$_NON_CLUSTERED started.
-[13:23:54:326] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
-[13:23:54:404] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204) - Tomcat started on port(s): 8080 (http) with context path ''
-[13:23:54:408] [INFO] - org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61) - Started Springboot01Application in 7.361 seconds (JVM running for 10.778)
-[13:23:55:025] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:24:00:001] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:24:00:023] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
-[13:24:05:018] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:24:10:000] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:24:10:005] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
-[13:24:15:001] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:24:20:028] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:24:20:031] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
-[13:24:25:000] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:24:30:002] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
-[13:24:30:004] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:24:35:002] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:24:40:001] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:24:40:003] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
-[13:24:45:001] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:24:50:002] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
-[13:24:50:007] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:24:55:001] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:25:00:000] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:25:00:002] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
-[13:25:05:005] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:25:10:035] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:25:10:038] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
-[13:25:15:065] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:25:20:002] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:25:20:002] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
-[13:25:25:001] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:25:30:002] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:25:30:003] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
-[13:25:35:001] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:25:40:000] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:25:40:006] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
-[13:25:45:001] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:25:50:001] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:25:50:005] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
-[13:25:55:000] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:26:00:006] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:26:00:015] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
-[13:26:05:002] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:26:10:048] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:26:10:051] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
-[13:26:15:002] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:26:20:002] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:26:20:048] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
-[13:26:25:001] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:26:30:092] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:26:30:101] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
-[13:26:35:001] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:25) - 定时器运行了！！！！
-[13:48:14:677] [INFO] - org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55) - Starting Springboot01Application on SteveKung-PC with PID 95624 (F:\java_workspace\springboot01\target\classes started by SteveKung in F:\java_workspace\springboot01)
-[13:48:14:692] [INFO] - org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651) - No active profile set, falling back to default profiles: default
-[13:48:16:013] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) - Multiple Spring Data modules found, entering strict repository configuration mode!
-[13:48:16:016] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[13:48:16:110] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) - Finished Spring Data repository scanning in 71ms. Found 1 JPA repository interfaces.
-[13:48:16:126] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) - Multiple Spring Data modules found, entering strict repository configuration mode!
-[13:48:16:128] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-[13:48:16:144] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate(RepositoryConfigurationExtensionSupport.java:348) - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.steve.springboot.repository.AyUserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-[13:48:16:144] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) - Finished Spring Data repository scanning in 7ms. Found 0 Redis repository interfaces.
-[13:48:16:477] [INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[13:48:16:753] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92) - Tomcat initialized with port(s): 8080 (http)
-[13:48:16:763] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
-[13:48:16:764] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting service [Tomcat]
-[13:48:16:765] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.29]
-[13:48:16:930] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
-[13:48:16:931] [INFO] - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 2163 ms
-[13:48:17:474] [ERROR] - com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:795) - testWhileIdle is true, validationQuery not set
-[13:48:17:481] [INFO] - com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:655) - {dataSource-1} inited
-[13:48:17:883] [INFO] - org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
-[13:48:17:970] [INFO] - org.hibernate.Version.logVersion(Version.java:46) - HHH000412: Hibernate Core {5.4.9.Final}
-[13:48:18:091] [INFO] - org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-[13:48:18:214] [INFO] - org.hibernate.dialect.Dialect.<init>(Dialect.java:172) - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-[13:48:18:799] [INFO] - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[13:48:18:810] [INFO] - org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[13:48:19:217] [INFO] - com.steve.springboot.listener.AyUserListener.contextInitialized(AyUserListener.java:42) - ServletContext 上下文初始化
-[13:48:19:520] [INFO] - io.lettuce.core.EpollProvider.<clinit>(EpollProvider.java:68) - Starting without optional epoll library
-[13:48:19:523] [INFO] - io.lettuce.core.KqueueProvider.<clinit>(KqueueProvider.java:70) - Starting without optional kqueue library
-[13:48:20:206] [INFO] - com.steve.springboot.listener.AyUserListener.contextInitialized(AyUserListener.java:53) - 缓存中目前的用户数有：4人
-[13:48:20:206] [INFO] - com.steve.springboot.listener.AyUserListener.contextInitialized(AyUserListener.java:55) - 用于统计人数
-[13:48:20:368] [INFO] - org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1220) - Using default implementation for ThreadExecutor
-[13:48:20:381] [INFO] - org.quartz.core.SchedulerSignalerImpl.<init>(SchedulerSignalerImpl.java:61) - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-[13:48:20:381] [INFO] - org.quartz.core.QuartzScheduler.<init>(QuartzScheduler.java:229) - Quartz Scheduler v.2.3.2 created.
-[13:48:20:382] [INFO] - org.quartz.simpl.RAMJobStore.initialize(RAMJobStore.java:155) - RAMJobStore initialized.
-[13:48:20:383] [INFO] - org.quartz.core.QuartzScheduler.initialize(QuartzScheduler.java:294) - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'scheduler' with instanceId 'NON_CLUSTERED'
+[09:11:25:872] [INFO] - org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1374) - Quartz scheduler 'scheduler' initialized from an externally provided properties instance.
+[09:11:25:873] [INFO] - org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1378) - Quartz scheduler version: 2.3.2
+[09:11:25:883] [INFO] - org.quartz.core.QuartzScheduler.setJobFactory(QuartzScheduler.java:2293) - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@1db5de29
+[09:11:26:136] [WARN] - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:220) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[09:11:26:943] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'applicationTaskExecutor'
+[09:11:27:540] [WARN] - org.thymeleaf.templatemode.TemplateMode.parse(TemplateMode.java:150) - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[09:11:28:268] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'taskScheduler'
+[09:11:28:383] [INFO] - org.springframework.scheduling.quartz.SchedulerFactoryBean.startScheduler(SchedulerFactoryBean.java:727) - Starting Quartz Scheduler now
+[09:11:28:384] [INFO] - org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:547) - Scheduler scheduler_$_NON_CLUSTERED started.
+[09:11:28:462] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+[09:11:28:553] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204) - Tomcat started on port(s): 8080 (http) with context path ''
+[09:11:28:560] [INFO] - org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61) - Started Springboot01Application in 44.905 seconds (JVM running for 63.003)
+[09:11:30:112] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
+[09:11:32:351] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
+	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 17 more
+[09:11:32:404] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:11:35:720] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
+	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 17 more
+[09:11:35:722] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:11:40:032] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
+[09:11:40:913] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
+	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 17 more
+[09:11:40:916] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:11:45:603] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
+	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 17 more
+[09:11:45:606] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:11:50:035] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
+[09:11:50:791] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
+	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 17 more
+[09:11:50:794] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:11:55:669] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
+	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 17 more
+[09:11:55:671] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:12:00:002] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
+[09:12:00:666] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
+	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 17 more
+[09:12:00:670] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:12:05:734] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
+	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 17 more
+[09:12:05:736] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:12:10:005] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
+[09:12:10:548] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
+	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 17 more
+[09:12:10:550] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:12:15:648] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
+	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 17 more
+[09:12:15:649] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:12:20:003] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
+[09:12:20:690] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
+	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 17 more
+[09:12:20:692] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:12:25:708] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
+	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 17 more
+[09:12:25:710] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:12:30:075] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
+[09:12:30:528] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
+	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 17 more
+[09:12:30:530] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:12:35:614] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
+	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 17 more
+[09:12:35:616] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:12:40:006] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
+[09:12:40:702] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
+	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 17 more
+[09:12:40:704] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:12:45:555] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
+	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 17 more
+[09:12:45:558] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:12:50:001] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
+[09:12:50:525] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
+	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor55.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 16 more
+[09:12:50:528] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:12:55:686] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
+	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor55.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 16 more
+[09:12:55:688] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:13:00:019] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
+[09:13:00:662] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
+	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor55.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 16 more
+[09:13:00:664] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:13:05:549] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
+	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor55.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 16 more
+[09:13:05:552] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:30:27:109] [INFO] - org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55) - Starting Springboot01Application on SteveKung-PC with PID 116872 (F:\java_workspace\springboot01\target\classes started by SteveKung in F:\java_workspace\springboot01)
+[09:30:27:361] [INFO] - org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651) - No active profile set, falling back to default profiles: default
+[09:30:33:942] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) - Multiple Spring Data modules found, entering strict repository configuration mode!
+[09:30:33:971] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[09:30:34:524] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) - Finished Spring Data repository scanning in 475ms. Found 1 JPA repository interfaces.
+[09:30:34:690] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) - Multiple Spring Data modules found, entering strict repository configuration mode!
+[09:30:34:706] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[09:30:34:837] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate(RepositoryConfigurationExtensionSupport.java:348) - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.steve.springboot.repository.AyUserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+[09:30:34:839] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) - Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
+[09:30:36:794] [INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[09:30:38:497] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92) - Tomcat initialized with port(s): 8080 (http)
+[09:30:38:560] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+[09:30:38:563] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting service [Tomcat]
+[09:30:38:568] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[09:30:39:420] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+[09:30:39:421] [INFO] - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 11625 ms
+[09:30:43:091] [ERROR] - com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:795) - testWhileIdle is true, validationQuery not set
+[09:30:43:131] [INFO] - com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:655) - {dataSource-1} inited
+[09:30:45:410] [INFO] - org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+[09:30:46:105] [INFO] - org.hibernate.Version.logVersion(Version.java:46) - HHH000412: Hibernate Core {5.4.9.Final}
+[09:30:47:187] [INFO] - org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[09:30:48:094] [INFO] - org.hibernate.dialect.Dialect.<init>(Dialect.java:172) - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[09:30:51:943] [INFO] - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[09:30:52:011] [INFO] - org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[09:30:54:016] [INFO] - com.steve.springboot.listener.AyUserListener.contextInitialized(AyUserListener.java:42) - ServletContext 上下文初始化
+[09:30:56:251] [INFO] - io.lettuce.core.EpollProvider.<clinit>(EpollProvider.java:68) - Starting without optional epoll library
+[09:30:56:268] [INFO] - io.lettuce.core.KqueueProvider.<clinit>(KqueueProvider.java:70) - Starting without optional kqueue library
+[09:30:58:316] [INFO] - com.steve.springboot.listener.AyUserListener.contextInitialized(AyUserListener.java:53) - 缓存中目前的用户数有：4人
+[09:30:58:317] [INFO] - com.steve.springboot.listener.AyUserListener.contextInitialized(AyUserListener.java:55) - 用于统计人数
+[09:30:58:910] [INFO] - org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1220) - Using default implementation for ThreadExecutor
+[09:30:58:974] [INFO] - org.quartz.core.SchedulerSignalerImpl.<init>(SchedulerSignalerImpl.java:61) - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+[09:30:58:975] [INFO] - org.quartz.core.QuartzScheduler.<init>(QuartzScheduler.java:229) - Quartz Scheduler v.2.3.2 created.
+[09:30:58:978] [INFO] - org.quartz.simpl.RAMJobStore.initialize(RAMJobStore.java:155) - RAMJobStore initialized.
+[09:30:58:981] [INFO] - org.quartz.core.QuartzScheduler.initialize(QuartzScheduler.java:294) - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'scheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -243,394 +718,21 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-[13:48:20:384] [INFO] - org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1374) - Quartz scheduler 'scheduler' initialized from an externally provided properties instance.
-[13:48:20:384] [INFO] - org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1378) - Quartz scheduler version: 2.3.2
-[13:48:20:386] [INFO] - org.quartz.core.QuartzScheduler.setJobFactory(QuartzScheduler.java:2293) - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@758655a9
-[13:48:20:445] [WARN] - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:220) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[13:48:20:613] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'applicationTaskExecutor'
-[13:48:20:769] [WARN] - org.thymeleaf.templatemode.TemplateMode.parse(TemplateMode.java:150) - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-[13:48:20:934] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'taskScheduler'
-[13:48:20:974] [INFO] - org.springframework.scheduling.quartz.SchedulerFactoryBean.startScheduler(SchedulerFactoryBean.java:727) - Starting Quartz Scheduler now
-[13:48:20:975] [INFO] - org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:547) - Scheduler scheduler_$_NON_CLUSTERED started.
-[13:48:20:993] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
-[13:48:20:997] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
-[13:48:21:015] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204) - Tomcat started on port(s): 8080 (http) with context path ''
-[13:48:21:018] [INFO] - org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61) - Started Springboot01Application in 6.689 seconds (JVM running for 10.922)
-[13:48:26:104] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
-org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
-	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
-	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
-	at java.lang.Thread.run(Thread.java:834) [?:?]
-Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	... 17 more
-[13:48:26:112] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
-[13:48:30:032] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
-[13:48:30:527] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
-org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
-	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
-	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
-	at java.lang.Thread.run(Thread.java:834) [?:?]
-Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	... 17 more
-[13:48:30:529] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
-[13:48:35:633] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
-org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
-	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
-	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
-	at java.lang.Thread.run(Thread.java:834) [?:?]
-Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	... 17 more
-[13:48:35:636] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
-[13:48:40:001] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
-[13:48:40:623] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
-org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
-	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
-	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
-	at java.lang.Thread.run(Thread.java:834) [?:?]
-Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	... 17 more
-[13:48:40:626] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
-[13:48:45:558] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
-org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
-	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
-	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
-	at java.lang.Thread.run(Thread.java:834) [?:?]
-Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	... 17 more
-[13:48:45:560] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
-[13:48:50:003] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
-[13:48:50:629] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
-org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
-	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
-	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
-	at java.lang.Thread.run(Thread.java:834) [?:?]
-Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	... 17 more
-[13:48:50:638] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
-[13:48:55:682] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
-org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
-	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
-	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
-	at java.lang.Thread.run(Thread.java:834) [?:?]
-Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	... 17 more
-[13:48:55:684] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
-[13:49:00:002] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
-[13:49:00:495] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
-org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
-	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
-	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
-	at java.lang.Thread.run(Thread.java:834) [?:?]
-Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	... 17 more
-[13:49:00:497] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
-[13:49:05:725] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
-org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
-	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
-	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
-	at java.lang.Thread.run(Thread.java:834) [?:?]
-Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	... 17 more
-[13:49:05:727] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
-[13:49:10:003] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
-[13:49:10:747] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
-org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
-	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
-	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
-	at java.lang.Thread.run(Thread.java:834) [?:?]
-Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	... 17 more
-[13:49:10:752] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
-[13:49:15:647] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
-org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
-	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
-	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
-	at java.lang.Thread.run(Thread.java:834) [?:?]
-Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	... 17 more
-[13:49:15:649] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
-[13:49:20:048] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
-[13:49:20:601] [ERROR] - com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:55) - sendJunkMail error and ayUser=%s
-org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.steve.springboot.mail.impl.SendJunkMailServiceImpl.sendJunkMail(SendJunkMailServiceImpl.java:52) [classes/:?]
-	at com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:46) [classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
-	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
-	at java.lang.Thread.run(Thread.java:834) [?:?]
-Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
-
-	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.4.jar:1.6.4]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	... 17 more
-[13:49:20:602] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:30:58:983] [INFO] - org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1374) - Quartz scheduler 'scheduler' initialized from an externally provided properties instance.
+[09:30:58:984] [INFO] - org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1378) - Quartz scheduler version: 2.3.2
+[09:30:58:990] [INFO] - org.quartz.core.QuartzScheduler.setJobFactory(QuartzScheduler.java:2293) - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@1f3dafd4
+[09:30:59:334] [WARN] - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:220) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[09:30:59:955] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'applicationTaskExecutor'
+[09:31:00:443] [WARN] - org.thymeleaf.templatemode.TemplateMode.parse(TemplateMode.java:150) - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[09:31:00:988] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'taskScheduler'
+[09:31:01:059] [INFO] - org.springframework.scheduling.quartz.SchedulerFactoryBean.startScheduler(SchedulerFactoryBean.java:727) - Starting Quartz Scheduler now
+[09:31:01:059] [INFO] - org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:547) - Scheduler scheduler_$_NON_CLUSTERED started.
+[09:31:01:086] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+[09:31:01:121] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
+[09:31:01:148] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204) - Tomcat started on port(s): 8080 (http) with context path ''
+[09:31:01:153] [INFO] - org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61) - Started Springboot01Application in 36.717 seconds (JVM running for 56.654)
+[09:31:09:546] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:31:10:019] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
+[09:31:13:193] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:31:18:076] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:31:20:017] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
