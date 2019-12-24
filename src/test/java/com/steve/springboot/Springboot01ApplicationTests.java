@@ -1,6 +1,8 @@
 package com.steve.springboot;
 
+import com.steve.springboot.model.AyMood;
 import com.steve.springboot.model.AyUser;
+import com.steve.springboot.service.AyMoodService;
 import com.steve.springboot.service.AyUserService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,6 +20,7 @@ import javax.annotation.Resource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @SpringBootTest
@@ -151,6 +154,22 @@ class Springboot01ApplicationTests {
         AyUser ayUser = ayUserService.findByNameAndPassword("阿毅", "123456");
         logger.info(ayUser.getId() + ayUser.getName());
         System.out.println(ayUser.getId() + ayUser.getName());
+    }
+
+    @Resource
+    private AyMoodService ayMoodService;
+    @Test
+    public void testAyMood(){
+        AyMood ayMood = new AyMood();
+        ayMood.setId("1");
+        // 用户阿毅id为1
+        ayMood.setUserId("1");
+        ayMood.setPraiseNum(0);
+        // 说说内容
+        ayMood.setContent("这是我第一条微信说说！！！！");
+        ayMood.setPublishTime(new Date());
+        // 往数据库保存一条数据。用户阿毅发表了一条说说
+        AyMood mood = ayMoodService.save(ayMood);
     }
 
 }
