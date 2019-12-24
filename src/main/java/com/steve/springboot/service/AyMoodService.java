@@ -11,5 +11,7 @@ import com.steve.springboot.model.AyMood;
 public interface AyMoodService {
     // 保存说说
     AyMood save(AyMood ayMood);
+    // 添加异步保存接口
+    String asynSave(AyMood ayMood);
 
 }

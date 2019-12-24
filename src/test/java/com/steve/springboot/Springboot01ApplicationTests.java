@@ -2,8 +2,10 @@ package com.steve.springboot;
 
 import com.steve.springboot.model.AyMood;
 import com.steve.springboot.model.AyUser;
+import com.steve.springboot.producer.AyMoodProducer;
 import com.steve.springboot.service.AyMoodService;
 import com.steve.springboot.service.AyUserService;
+import org.apache.activemq.command.ActiveMQQueue;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
@@ -17,6 +19,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.util.Assert;
 
 import javax.annotation.Resource;
+import javax.jms.Destination;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -171,5 +174,14 @@ class Springboot01ApplicationTests {
         // 往数据库保存一条数据。用户阿毅发表了一条说说
         AyMood mood = ayMoodService.save(ayMood);
     }
+
+    @Resource
+    private AyMoodProducer ayMoodProducer;
+    @Test
+    public void testActiveMQ(){
+        Destination destination = new ActiveMQQueue("ay.queue");
+        ayMoodProducer.sendMessagr(destination,"hello,mq!!!");
+    }
+
 
 }
