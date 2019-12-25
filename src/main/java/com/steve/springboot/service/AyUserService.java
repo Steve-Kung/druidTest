@@ -38,4 +38,6 @@ public interface AyUserService {
     AyUser findByNameAndPassword(String name, String password);
 
     AyUser findByNameAndPasswordRetry(String name, String password);
+
+    public AyUser findByUserName(String name);
 }

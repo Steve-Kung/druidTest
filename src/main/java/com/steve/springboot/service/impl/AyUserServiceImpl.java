@@ -148,4 +148,13 @@ public class AyUserServiceImpl implements AyUserService {
         System.out.println("[findByNameAndPasswordRetry] 方法失败重试了！");
         throw new BusinessException();
     }
+
+    @Override
+    public AyUser findByUserName(String name) {
+        List<AyUser> ayUsers = findByName(name);
+        if(ayUsers == null && ayUsers.size() <= 0){
+            return null;
+        }
+        return ayUsers.get(0);
+    }
 }
