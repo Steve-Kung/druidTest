@@ -1,7 +1,11 @@
 package com.steve.springboot.consumer;
 
+import com.steve.springboot.model.AyMood;
+import com.steve.springboot.service.AyMoodService;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.Resource;
 
 /**
  * @Auther: http://www.stevekung.com
@@ -15,5 +19,11 @@ public class AyMoodConsumer {
     @JmsListener(destination = "ay.queue")
     public void receiveQueue(String text){
         System.out.println("用户发表说说【" + text + "】成功了");
+    }
+    @Resource
+    private AyMoodService ayMoodService;
+    @JmsListener(destination = "ay.queue.asyn.save")
+    public void receiveQueue(AyMood ayMood){
+        ayMoodService.save(ayMood);
     }
 }

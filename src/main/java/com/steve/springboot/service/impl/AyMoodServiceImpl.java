@@ -34,6 +34,8 @@ public class AyMoodServiceImpl implements AyMoodService {
 
     @Override
     public String asynSave(AyMood ayMood) {
-        return null;
+        // 往队列ay.queue.asyn.save推送消息，消息内容为说说实体
+        ayMoodProducer.sendMessage(destination,ayMood);
+        return "success";
     }
 }

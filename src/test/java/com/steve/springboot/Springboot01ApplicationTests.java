@@ -25,6 +25,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.Future;
 
 @SpringBootTest
 class Springboot01ApplicationTests {
@@ -180,8 +181,51 @@ class Springboot01ApplicationTests {
     @Test
     public void testActiveMQ(){
         Destination destination = new ActiveMQQueue("ay.queue");
-        ayMoodProducer.sendMessagr(destination,"hello,mq!!!");
+        ayMoodProducer.sendMessage(destination,"hello,mq!!!");
     }
 
+    @Test
+    public void testActiveMQAsynSave(){
+        AyMood ayMood = new AyMood();
+        ayMood.setId("2");
+        ayMood.setUserId("2");
+        ayMood.setPraiseNum(0);
+        ayMood.setContent("这是我第一条微信说说！！！！");
+        ayMood.setPublishTime(new Date());
+        String msg = ayMoodService.asynSave(ayMood);
+        System.out.println("异步发表说说："+msg);
+    }
+    @Test
+    public void testAsync(){
+        long startTime = System.currentTimeMillis();
+        System.out.println("第一次查询所有用户！");
+        List<AyUser> ayUserList = ayUserService.findAll();
+        System.out.println("第二次查询所有用户！");
+        List<AyUser> ayUserList2 = ayUserService.findAll();
+        System.out.println("第三次查询所有用户！");
+        List<AyUser> ayUserList3 = ayUserService.findAll();
+        long endTime = System.currentTimeMillis();
+        System.out.println("总共消耗：" + (endTime - startTime) + "毫秒");
+    }
+
+    @Test
+    public void testAsync2()throws Exception{
+        long startTime = System.currentTimeMillis();
+        System.out.println("第一次查询所有用户！");
+        Future<List<AyUser>> ayUserList = ayUserService.findAsynAll();
+        System.out.println("第二次查询所有用户！");
+        Future<List<AyUser>> ayUserList2 = ayUserService.findAsynAll();
+        System.out.println("第三次查询所有用户！");
+        Future<List<AyUser>> ayUserList3 = ayUserService.findAsynAll();
+        while (true){
+            if(ayUserList.isDone() && ayUserList2.isDone() && ayUserList3.isDone()){
+                break;
+            }else {
+                Thread.sleep(10);
+            }
+        }
+        long endTime = System.currentTimeMillis();
+        System.out.println("总共消耗：" + (endTime - startTime) + "毫秒");
+    }
 
 }

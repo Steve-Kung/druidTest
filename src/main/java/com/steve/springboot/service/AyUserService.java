@@ -6,6 +6,7 @@ import org.springframework.data.domain.Pageable;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.concurrent.Future;
 
 /**
  * @Auther: http://www.stevekung.com
@@ -17,6 +18,10 @@ public interface AyUserService {
     // 增删改查
     AyUser findById(String id);
     List<AyUser> findAll();
+
+    // 异步查询
+    Future<List<AyUser>> findAsynAll();
+
     AyUser save(AyUser ayUser);// 同时具备保存和更新数据的功能
     void delete(String id);
 

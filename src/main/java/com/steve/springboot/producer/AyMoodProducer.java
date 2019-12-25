@@ -1,6 +1,7 @@
 package com.steve.springboot.producer;
 
 
+import com.steve.springboot.model.AyMood;
 import org.springframework.jms.core.JmsMessagingTemplate;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +18,10 @@ import javax.jms.Destination;
 public class AyMoodProducer {
     @Resource //JmsMessagingTemplate发消息的工具类，参数destination是发送到队列的，message是待发送的消息
     private JmsMessagingTemplate jmsMessagingTemplate;
-    public void sendMessagr(Destination destination, final String message){
+    public void sendMessage(Destination destination, final String message){
         jmsMessagingTemplate.convertAndSend(destination, message);
+    }
+    public void sendMessage(Destination destination, final AyMood ayMood){
+        jmsMessagingTemplate.convertAndSend(destination,ayMood);
     }
 }
