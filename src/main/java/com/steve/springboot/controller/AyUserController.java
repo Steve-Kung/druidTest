@@ -1,5 +1,6 @@
 package com.steve.springboot.controller;
 
+import com.steve.springboot.error.BusinessException;
 import com.steve.springboot.model.AyUser;
 import com.steve.springboot.service.AyUserService;
 import org.springframework.stereotype.Controller;
@@ -27,5 +28,11 @@ public class AyUserController {
         List<AyUser> ayUser = ayUserService.findAll();
         model.addAttribute("users", ayUser);
         return "ayUser";
+    }
+    @RequestMapping("findAll")
+    public String findAll(Model model){
+        List<AyUser> ayUser = ayUserService.findAll();
+        model.addAttribute("users",ayUser);
+        throw new BusinessException("业务异常");
     }
 }

@@ -403,3 +403,75 @@
 [09:34:15:008] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
 [09:34:20:015] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
 [09:34:20:042] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
+[09:54:58:783] [INFO] - org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21) - HV000001: Hibernate Validator 6.0.18.Final
+[09:54:58:942] [INFO] - org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55) - Starting Springboot01Application on SteveKung-PC with PID 116216 (F:\java_workspace\springboot01\target\classes started by SteveKung in F:\java_workspace\springboot01)
+[09:54:58:953] [INFO] - org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651) - No active profile set, falling back to default profiles: default
+[09:55:00:358] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) - Multiple Spring Data modules found, entering strict repository configuration mode!
+[09:55:00:361] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[09:55:00:450] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) - Finished Spring Data repository scanning in 77ms. Found 2 JPA repository interfaces.
+[09:55:00:473] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) - Multiple Spring Data modules found, entering strict repository configuration mode!
+[09:55:00:475] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[09:55:00:499] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate(RepositoryConfigurationExtensionSupport.java:348) - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.steve.springboot.repository.AyMoodRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+[09:55:00:501] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate(RepositoryConfigurationExtensionSupport.java:348) - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.steve.springboot.repository.AyUserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+[09:55:00:501] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) - Finished Spring Data repository scanning in 14ms. Found 0 Redis repository interfaces.
+[09:55:00:970] [INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[09:55:01:279] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92) - Tomcat initialized with port(s): 8080 (http)
+[09:55:01:290] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+[09:55:01:291] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting service [Tomcat]
+[09:55:01:292] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[09:55:01:444] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+[09:55:01:445] [INFO] - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 2416 ms
+[09:55:02:013] [ERROR] - com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:795) - testWhileIdle is true, validationQuery not set
+[09:55:02:021] [INFO] - com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:655) - {dataSource-1} inited
+[09:55:02:428] [INFO] - org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+[09:55:02:513] [INFO] - org.hibernate.Version.logVersion(Version.java:46) - HHH000412: Hibernate Core {5.4.9.Final}
+[09:55:02:654] [INFO] - org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[09:55:02:791] [INFO] - org.hibernate.dialect.Dialect.<init>(Dialect.java:172) - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[09:55:03:527] [INFO] - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[09:55:03:541] [INFO] - org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[09:55:04:049] [INFO] - com.steve.springboot.listener.AyUserListener.contextInitialized(AyUserListener.java:42) - ServletContext 上下文初始化
+[09:55:04:395] [INFO] - io.lettuce.core.EpollProvider.<clinit>(EpollProvider.java:68) - Starting without optional epoll library
+[09:55:04:397] [INFO] - io.lettuce.core.KqueueProvider.<clinit>(KqueueProvider.java:70) - Starting without optional kqueue library
+[09:55:06:655] [INFO] - com.steve.springboot.listener.AyUserListener.contextInitialized(AyUserListener.java:53) - 缓存中目前的用户数有：4人
+[09:55:06:656] [INFO] - com.steve.springboot.listener.AyUserListener.contextInitialized(AyUserListener.java:55) - 用于统计人数
+[09:55:07:067] [INFO] - org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1220) - Using default implementation for ThreadExecutor
+[09:55:07:088] [INFO] - org.quartz.core.SchedulerSignalerImpl.<init>(SchedulerSignalerImpl.java:61) - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+[09:55:07:089] [INFO] - org.quartz.core.QuartzScheduler.<init>(QuartzScheduler.java:229) - Quartz Scheduler v.2.3.2 created.
+[09:55:07:091] [INFO] - org.quartz.simpl.RAMJobStore.initialize(RAMJobStore.java:155) - RAMJobStore initialized.
+[09:55:07:092] [INFO] - org.quartz.core.QuartzScheduler.initialize(QuartzScheduler.java:294) - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'scheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+[09:55:07:093] [INFO] - org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1374) - Quartz scheduler 'scheduler' initialized from an externally provided properties instance.
+[09:55:07:093] [INFO] - org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1378) - Quartz scheduler version: 2.3.2
+[09:55:07:096] [INFO] - org.quartz.core.QuartzScheduler.setJobFactory(QuartzScheduler.java:2293) - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@1196537d
+[09:55:07:197] [WARN] - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:220) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[09:55:07:502] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'applicationTaskExecutor'
+[09:55:07:958] [WARN] - org.thymeleaf.templatemode.TemplateMode.parse(TemplateMode.java:150) - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[09:55:08:225] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'taskScheduler'
+[09:55:08:325] [INFO] - org.springframework.scheduling.quartz.SchedulerFactoryBean.startScheduler(SchedulerFactoryBean.java:727) - Starting Quartz Scheduler now
+[09:55:08:326] [INFO] - org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:547) - Scheduler scheduler_$_NON_CLUSTERED started.
+[09:55:08:580] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+[09:55:08:610] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204) - Tomcat started on port(s): 8080 (http) with context path ''
+[09:55:08:613] [INFO] - org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61) - Started Springboot01Application in 10.635 seconds (JVM running for 13.828)
+[09:55:10:018] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:55:10:041] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
+[09:55:15:026] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:55:20:009] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:55:20:031] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
+[09:55:21:950] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[09:55:21:951] [INFO] - org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+[09:55:21:964] [INFO] - org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547) - Completed initialization in 13 ms
+[09:55:25:010] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:55:30:005] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
+[09:55:30:011] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:55:35:011] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:55:40:002] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
+[09:55:40:008] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:55:45:009] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:55:50:007] [INFO] - com.steve.springboot.quartz.SendMailQuartz.reportCurrentByCron(SendMailQuartz.java:47) - 定时器运行了!!!
+[09:55:50:090] [INFO] - com.steve.springboot.quartz.TestTask.run(TestTask.java:16) - 定时器运行了!!!
