@@ -43,7 +43,7 @@ public class SendMailQuartz {
         List<AyUser> userList = ayUserService.findAll();
         if (userList == null || userList.size() <= 0) return;
         //发送邮件
-        sendJunkMailService.sendJunkMail(userList);
+//        sendJunkMailService.sendJunkMail(userList);
         logger.info("定时器运行了!!!");
 
     }
