@@ -36,4 +36,6 @@ public interface AyUserService {
     List<AyUser> findByIdIn(Collection<String> ids);
 
     AyUser findByNameAndPassword(String name, String password);
+
+    AyUser findByNameAndPasswordRetry(String name, String password);
 }

@@ -29,10 +29,16 @@ public class AyUserController {
         model.addAttribute("users", ayUser);
         return "ayUser";
     }
-    @RequestMapping("findAll")
+    @RequestMapping("/findAll")
     public String findAll(Model model){
         List<AyUser> ayUser = ayUserService.findAll();
         model.addAttribute("users",ayUser);
         throw new BusinessException("业务异常");
+    }
+    @RequestMapping("/findByNameAndPasswordRetry")
+    public String findByNameAndPasswordRetry(Model model){
+        AyUser ayUser = ayUserService.findByNameAndPasswordRetry("阿毅", "123456");
+        model.addAttribute("users", ayUser);
+        return "success";
     }
 }

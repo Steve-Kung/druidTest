@@ -1,6 +1,7 @@
 package com.steve.springboot.service.impl;
 
 import com.steve.springboot.dao.AyUserDao;
+import com.steve.springboot.error.BusinessException;
 import com.steve.springboot.model.AyUser;
 import com.steve.springboot.repository.AyUserRepository;
 import com.steve.springboot.service.AyUserService;
@@ -9,6 +10,8 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.retry.annotation.Backoff;
+import org.springframework.retry.annotation.Retryable;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.AsyncResult;
 import org.springframework.stereotype.Service;
@@ -134,5 +137,15 @@ public class AyUserServiceImpl implements AyUserService {
     @Override
     public AyUser findByNameAndPassword(String name, String password) {
         return ayUserDao.findByNameAndPassword(name, password);
+    }
+
+    @Override
+    // value属性表示出现哪些异常的时候触发重试，maxAttempts表示最大重试次数默认为3，
+    // delay表示重试的延迟时间，multiplier表示上一次延时是这一次的倍数
+    @Retryable(value = {BusinessException.class},maxAttempts = 5,
+            backoff = @Backoff(delay = 5000, multiplier = 2))
+    public AyUser findByNameAndPasswordRetry(String name, String password) {
+        System.out.println("[findByNameAndPasswordRetry] 方法失败重试了！");
+        throw new BusinessException();
     }
 }
