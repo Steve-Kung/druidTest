@@ -2,8 +2,10 @@ package com.steve.springboot;
 
 import com.steve.springboot.model.AyMood;
 import com.steve.springboot.model.AyUser;
+import com.steve.springboot.model.AyUserAttachmentRel;
 import com.steve.springboot.producer.AyMoodProducer;
 import com.steve.springboot.service.AyMoodService;
+import com.steve.springboot.service.AyUserAttachmentRelService;
 import com.steve.springboot.service.AyUserService;
 import org.apache.activemq.command.ActiveMQQueue;
 import org.apache.logging.log4j.LogManager;
@@ -226,6 +228,20 @@ class Springboot01ApplicationTests {
         }
         long endTime = System.currentTimeMillis();
         System.out.println("总共消耗：" + (endTime - startTime) + "毫秒");
+    }
+
+    @Resource
+    private AyUserAttachmentRelService ayUserAttachmentRelService;
+
+    // MongoDB非常适合文档化格式的存储
+    @Test
+    public void testMongoDB(){
+        AyUserAttachmentRel ayUserAttachmentRel = new AyUserAttachmentRel();
+        ayUserAttachmentRel.setId("1");
+        ayUserAttachmentRel.setUserId("1");
+        ayUserAttachmentRel.setFileName("个人简历.doc");
+        ayUserAttachmentRelService.save(ayUserAttachmentRel);
+        System.out.println("保存成功");
     }
 
 }
